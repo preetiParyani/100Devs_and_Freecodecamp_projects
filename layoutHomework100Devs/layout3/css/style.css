@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+header,footer{
+    height: 100px;
+    border: 2px solid gray;
+    clear: both;
+}
+section.one{
+    height: 300px;
+    width: 20%;
+    float: left;
+    border: 2px solid gray;
+}
+section.two{
+    height: 300px;
+    width: 20%;
+    float: left;
+    border: 2px solid gray;
+}
+section.three{
+    height: 300px;
+    width: 40%;
+    float: left;
+    border: 2px solid gray;
+}
+section.four{
+    height: 300px;
+    width: 20%;
+    float: left;
+    border: 2px solid gray;
+}

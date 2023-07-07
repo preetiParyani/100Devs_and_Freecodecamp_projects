@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>SurveyForm</title>
+</head>
+<body>
+    <h1 id="title">Survey-form</h1>
+    <p id="description">Its required to fill the details below.</p>
+    <form id="survey-form">
+      <label id="name-label">Name</label>
+      <input type="text" name="" id="name" placeholder='Enter your name' required>
+      <label id="email-label">Email</label>
+      <input type="email" name="" id="email" placeholder='Enter your email' required>
+      <label id="number-label">Number</label>
+      <input type="number" name="" id="number" placeholder='Enter your number' min=10 max=10 required>
+      <label for="select">Gender</label>
+      <select id=dropdown>
+        <option value="male">Male</option>
+  <option value="female">Female</option>
+      </select>
+      <input type="radio" value='gender' name='gender'>male
+      <input type="radio" value='gender' name='gender'>female
+
+      <label for="checkbox">Gender</label>
+      <input type="checkbox" name='gender' value='hobby'>writing
+      <input type="checkbox" name='gender' value='hobby'>reading
+      
+      <textarea placeholder="add comments"></textarea>
+      <button id="submit">submit</button>
+    </form>
+</body>
+</html>
