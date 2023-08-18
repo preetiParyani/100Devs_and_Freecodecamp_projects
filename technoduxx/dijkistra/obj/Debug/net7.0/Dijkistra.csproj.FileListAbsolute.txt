@@ -1,0 +1,5 @@
+D:\technoduxx\dijkistra\obj\Debug\net7.0\Dijkistra.csproj.AssemblyReference.cache
+D:\technoduxx\dijkistra\obj\Debug\net7.0\Dijkistra.GeneratedMSBuildEditorConfig.editorconfig
+D:\technoduxx\dijkistra\obj\Debug\net7.0\Dijkistra.AssemblyInfoInputs.cache
+D:\technoduxx\dijkistra\obj\Debug\net7.0\Dijkistra.AssemblyInfo.cs
+D:\technoduxx\dijkistra\obj\Debug\net7.0\Dijkistra.csproj.CoreCompileInputs.cache

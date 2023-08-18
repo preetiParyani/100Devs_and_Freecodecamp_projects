@@ -1,0 +1,15 @@
+D:\technoduxx\sorting\bin\Debug\net7.0\sorting.exe
+D:\technoduxx\sorting\bin\Debug\net7.0\sorting.deps.json
+D:\technoduxx\sorting\bin\Debug\net7.0\sorting.runtimeconfig.json
+D:\technoduxx\sorting\bin\Debug\net7.0\sorting.dll
+D:\technoduxx\sorting\bin\Debug\net7.0\sorting.pdb
+D:\technoduxx\sorting\obj\Debug\net7.0\sorting.csproj.AssemblyReference.cache
+D:\technoduxx\sorting\obj\Debug\net7.0\sorting.GeneratedMSBuildEditorConfig.editorconfig
+D:\technoduxx\sorting\obj\Debug\net7.0\sorting.AssemblyInfoInputs.cache
+D:\technoduxx\sorting\obj\Debug\net7.0\sorting.AssemblyInfo.cs
+D:\technoduxx\sorting\obj\Debug\net7.0\sorting.csproj.CoreCompileInputs.cache
+D:\technoduxx\sorting\obj\Debug\net7.0\sorting.dll
+D:\technoduxx\sorting\obj\Debug\net7.0\refint\sorting.dll
+D:\technoduxx\sorting\obj\Debug\net7.0\sorting.pdb
+D:\technoduxx\sorting\obj\Debug\net7.0\sorting.genruntimeconfig.cache
+D:\technoduxx\sorting\obj\Debug\net7.0\ref\sorting.dll

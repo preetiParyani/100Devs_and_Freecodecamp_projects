@@ -1,0 +1,15 @@
+d:\technoduxx\C#_practice\C#_basics\bin\Debug\net7.0\C#_basics.exe
+d:\technoduxx\C#_practice\C#_basics\bin\Debug\net7.0\C#_basics.deps.json
+d:\technoduxx\C#_practice\C#_basics\bin\Debug\net7.0\C#_basics.runtimeconfig.json
+d:\technoduxx\C#_practice\C#_basics\bin\Debug\net7.0\C#_basics.dll
+d:\technoduxx\C#_practice\C#_basics\bin\Debug\net7.0\C#_basics.pdb
+d:\technoduxx\C#_practice\C#_basics\obj\Debug\net7.0\C#_basics.csproj.AssemblyReference.cache
+d:\technoduxx\C#_practice\C#_basics\obj\Debug\net7.0\C#_basics.GeneratedMSBuildEditorConfig.editorconfig
+d:\technoduxx\C#_practice\C#_basics\obj\Debug\net7.0\C#_basics.AssemblyInfoInputs.cache
+d:\technoduxx\C#_practice\C#_basics\obj\Debug\net7.0\C#_basics.AssemblyInfo.cs
+d:\technoduxx\C#_practice\C#_basics\obj\Debug\net7.0\C#_basics.csproj.CoreCompileInputs.cache
+d:\technoduxx\C#_practice\C#_basics\obj\Debug\net7.0\C#_basics.dll
+d:\technoduxx\C#_practice\C#_basics\obj\Debug\net7.0\refint\C#_basics.dll
+d:\technoduxx\C#_practice\C#_basics\obj\Debug\net7.0\C#_basics.pdb
+d:\technoduxx\C#_practice\C#_basics\obj\Debug\net7.0\C#_basics.genruntimeconfig.cache
+d:\technoduxx\C#_practice\C#_basics\obj\Debug\net7.0\ref\C#_basics.dll
