@@ -17,136 +17,139 @@
     <title>Registration Form</title>
   </head>
   <body>
-    <div class="mainContainer">
-      <header>
+    <div class="main_container">
+      <div class="sidebar_container">
         <!-- Navbar -->
         <nav class="sideBar">
           <ul>
             <li class="logo"><h1>LOGO</h1></li>
-            <li>
-              <i class="fa-solid fa-file"></i> &nbsp;&nbsp;<span>Form</span>
-            </li>
-            <li>
-              <i class="fa-solid fa-file"></i> &nbsp;&nbsp;<span>Form</span>
-            </li>
-            <li>
-              <i class="fa-solid fa-file"></i> &nbsp;&nbsp;<span>Form</span>
-            </li>
-            <li>
-              <i class="fa-solid fa-file"></i> &nbsp;&nbsp;<span>Form</span>
-            </li>
-            <li>
-              <i class="fa-solid fa-file"></i> &nbsp;&nbsp;<span>Form</span>
-            </li>
+            <li><i class="fa-solid fa-file"></i><span>Form</span></li>
+            <li><i class="fa-solid fa-file"></i><span>Form</span></li>
+            <li><i class="fa-solid fa-file"></i><span>Form</span></li>
+            <li><i class="fa-solid fa-file"></i><span>Form</span></li>
+            <li><i class="fa-solid fa-file"></i><span>Form</span></li>
           </ul>
         </nav>
-      </header>
-      <main>
-        <nav class="upperNavbar">
+      </div>
+      <div class="content_container">
+        <nav class="upper_navbar">
           <button><i id="menu" class="fa-solid fa-bars"></i></button>
           <button><i class="fa-solid fa-user"></i></button>
         </nav>
-        <section class="content">
-          <section id="form">
+        <div class="data_container">
+          <div class="form_container">
             <form action="#">
-              <section>
-                <label for="name">Name</label>
-                <input id="name" type="text" placeholder="Enter your name" />
-              </section>
+              <div class="formFields_container">
+                <section>
+                  <label for="name">Name</label>
+                  <input id="name" type="text" placeholder="Enter your name" />
+                </section>
 
-              <section>
-                <label for="name">Class</label>
-                <input id="name" type="text" placeholder="Enter your class" />
-              </section>
+                <section>
+                  <label for="name">Class</label>
+                  <input id="name" type="text" placeholder="Enter your class" />
+                </section>
 
-              <section>
-                <label for="name">City</label>
-                <select name="city" id="city">
-                  <option value="bhopal">Bhopal</option>
-                  <option value="indore">Indore</option>
-                  <option value="jabalbur">Jabalpur</option>
-                  <option value="satna">Satna</option>
-                </select>
-              </section>
+                <section>
+                  <label for="name">City</label>
+                  <select name="city" id="city">
+                    <option value="select" selected disabled>--select--</option>
+                    <option value="bhopal">Bhopal</option>
+                    <option value="indore">Indore</option>
+                    <option value="jabalbur">Jabalpur</option>
+                    <option value="satna">Satna</option>
+                  </select>
+                </section>
 
-              <section id="gender">
-                <label for="gender_type">Gender</label>
+                <section id="gender">
+                  <label for="gender_type">Gender</label>
 
-                <label for="male" class="gender_option">
-                  <input id="male" type="radio" name="gender_type" />
-                  Male
-                </label>
+                  <label for="male" class="gender_option">
+                    <input id="male" type="radio" name="gender_type" />
+                    Male
+                  </label>
 
-                <label for="female" class="gender_option">
-                  <input id="female" type="radio" name="gender_type" />
-                  Female
-                </label>
+                  <label for="female" class="gender_option">
+                    <input id="female" type="radio" name="gender_type" />
+                    Female
+                  </label>
 
-                <label for="other" class="gender_option">
-                  <input id="other" type="radio" name="gender_type" />
-                  Other
-                </label>
-              </section>
+                  <label for="other" class="gender_option">
+                    <input id="other" type="radio" name="gender_type" />
+                    Other
+                  </label>
+                </section>
 
-              <section id="nationality">
-                <label for="nationality">Nationality</label>
+                <section id="nationality">
+                  <label for="nationality">Nationality</label>
 
-                <label for="indian" class="nationality_option">
-                  <input type="checkbox" id="nationality" name="nationality" />
-                  Indian
-                </label>
+                  <label for="indian" class="nationality_option">
+                    <input
+                      type="checkbox"
+                      id="nationality"
+                      name="nationality"
+                    />
+                    Indian
+                  </label>
 
-                <label for="other" class="nationality_option">
-                  <input type="checkbox" id="nationality" name="nationality" />
-                  Other
-                </label>
-              </section>
+                  <label for="other" class="nationality_option">
+                    <input
+                      type="checkbox"
+                      id="nationality"
+                      name="nationality"
+                    />
+                    Other
+                  </label>
+                </section>
+              </div>
+
               <div class="button_container">
                 <button id="saveBtn" type="button">Save</button>
                 <button type="button">Reset</button>
               </div>
             </form>
-          </section>
+          </div>
+          <div class="table_container">
+            <table class="table">
+              <tr>
+                <th>Subject</th>
+                <th>Marks</th>
+                <th>Status</th>
+              </tr>
 
-          <table class="table">
-            <tr>
-              <th>Subject</th>
-              <th>Marks</th>
-              <th>Status</th>
-            </tr>
+              <tr>
+                <td>Maths</td>
+                <td>76</td>
+                <td>Pass</td>
+              </tr>
 
-            <tr>
-              <td>Maths</td>
-              <td>76</td>
-              <td>Pass</td>
-            </tr>
+              <tr>
+                <td>Physics</td>
+                <td>81</td>
+                <td>Pass</td>
+              </tr>
 
-            <tr>
-              <td>Physics</td>
-              <td>81</td>
-              <td>Pass</td>
-            </tr>
+              <tr>
+                <td>Chemistry</td>
+                <td>86</td>
+                <td>Pass</td>
+              </tr>
 
-            <tr>
-              <td>Chemistry</td>
-              <td>86</td>
-              <td>Pass</td>
-            </tr>
+              <tr>
+                <td>English</td>
+                <td>96</td>
+                <td>Pass</td>
+              </tr>
 
-            <tr>
-              <td>English</td>
-              <td>96</td>
-              <td>Pass</td>
-            </tr>
-
-            <tr>
-              <td>Computer Science</td>
-              <td>92</td>
-              <td>Pass</td>
-            </tr>
-          </table>
-        </section>
-      </main>
+              <tr>
+                <td>Computer Science</td>
+                <td>92</td>
+                <td>Pass</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="hidden popup_container">
       <section id="popUp">
