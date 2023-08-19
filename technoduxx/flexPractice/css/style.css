@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  overflow: auto;
 }
 :root {
   --primary-color: #f9d904;
@@ -29,7 +30,7 @@ li {
 .sidebar_container {
   margin: 0;
   padding: 0;
-  width: 20%;
+  width: 15%;
   height: 100%;
   background-color: var(--primary-color);
   color: var(--dark);
@@ -47,12 +48,12 @@ li {
 .content_container {
   margin: 0;
   padding: 0;
-  width: 80%;
+  width: 85%;
   height: 100%;
   color: var(--light);
   background-color: var(--dark);
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 .content_container nav {
   display: flex;
@@ -78,10 +79,12 @@ li {
 .data_container .table_container {
   width: 100%;
   height: 50%;
+  margin: 0;
+  padding: 1em;
 }
 .form_container form {
-  height: 100%;
-  width: 100%;
+  /* height: 100%;
+  width: 100%; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -98,9 +101,17 @@ li {
 .form_container form .formFields_container section {
   width: 33.33%;
 }
-/* yaha se start krna hai */
-.form_container form .formFields_container section input, label{
-  display: inline;
+
+.form_container form .formFields_container section input,
+label,
+select {
+  display: flex;
+  margin: 0.3em;
+  padding: 0.3em;
+}
+
+.form_container form .formFields_container section select {
+  width: 10rem;
 }
 .form_container form .button_container {
   display: flex;
@@ -109,163 +120,66 @@ li {
   width: 100%;
   height: 20%;
 }
-.form_container form .button_container button {
+.button {
   background-color: var(--primary-color);
   color: var(--dark);
-  font-size: 0.7rem;
-  font-weight: 400;
-  width: 4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 6rem;
+  height: 2rem;
   border: none;
   border-radius: 0.3em;
 }
-/* h1 {
-  width: fit-content;
-
-  font-size: 3rem;
-  color: #000000;
-} */
-
-/* ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-} */
-/* a {
-  text-decoration: none;
-  color: black;
-} */
-/* .sideBar {
-  margin: 0;
-  padding: 0;
-  top: 0;
-  left: 0;
-  position: fixed;
-  width: 20%;
-  height: 100vh;
-  background-color: rgb(246, 178, 5);
-  color: black;
-}
-.upperNavbar {
-  margin-left: 20%;
-  padding: 0.5rem;
-  top: 0;
-  height: 7vh;
-  display: flex;
-  justify-content: space-between;
-} */
-/* .upperNavbar button {
-  border: none;
-  background: transparent;
-}
-li i {
-  color: #1c1c1c;
-} */
-/* .sideBar ul {
-  margin: 1rem;
-} */
-/* .sideBar ul li {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-start;
-}
-button i {
-  color: rgb(246, 178, 5);
-  font-size: 1.5rem;
-} */
-
-/* .content {
-  position: fixed;
-
-  margin-left: 20%;
-  height: 93vh;
-  padding: 1rem;
-}
-label,
-input {
-  display: block;
-} */
-/* 
-#form {
+.table_container table {
   width: 100%;
-  height: 20rem;
-} */
-
-/* form {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
+  height: 100%;
+  text-align: left;
 }
-
-#form section {
-  display: flex;
-  flex-direction: column;
-  width: 24%;
-  margin: 1.5rem 5rem 0rem 0;
+.table_container table tr td {
+  border: 0.1em solid var(--light);
+  border-radius: 0.4em;
 }
-
-form section label {
-  margin-bottom: 0.6rem;
-  color: #1c1c1c;
-  font-weight: 700;
-}
-
-form section input,
-select {
-  padding: 0.5rem;
-  border-radius: 4px;
-  border: 2px solid #d2d2d2;
-  background-color: #e9e9ed;
-}
-
-form #gender .gender_option,
-#nationality .nationality_option {
-  color: #1c1c1cd1;
-  font-weight: 500;
-}
-
-.button_container { */
-/* width: 90%;
-  margin: auto;
+.popup_container {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
-  padding: auto 0;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(196, 196, 196, 0.258);
+}
+#popUp {
+  color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  background-color: var(--primary-color);
+  height: 20rem;
+  border-radius: 20px;
+}
+#popUp .button {
+  background-color: var(--dark);
+  color: var(--light);
+}
+.blurr {
+  opacity: 0.5;
 }
 
-.button_container button,
-#exit {
-  text-align: center;
-  padding: 1rem 2rem;
-  margin-left: 2rem;
-  background-color: rgb(246, 178, 5);
-  color: #ffffff;
-  border: none;
-  border-radius: 1em;
+.hidden {
+  display: none;
 }
 
-.table {
-  background-color: #fafbfc;
-  width: 90%;
-  margin: auto;
+.hideMenu {
+  margin-left: -15%;
+  transition: all 2s ease;
+  
 }
 
-th {
-  color: #686868;
-}
-
-td {
-  color: #8c8c8c;
-}
-
-td,
-th {
-  text-align: left;
-  border: 2px solid #d2d2d2;
-  padding: 0.7rem;
-  border-radius: 4px;
-}
-
+/* 
 .popup_container {
   width: 100%;
   height: 100vh;
@@ -277,17 +191,7 @@ th {
   left: 0;
 }
 
-#popUp {
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: baseline;
-  width: 50%;
-  background-color: rgb(246, 178, 5);
-  border: 1px solid red;
-  height: 25rem;
-  border-radius: 20px;
-}
+
 
 #popUp img {
   width: 30%;
@@ -299,18 +203,7 @@ th {
   border: 1px solid red;
 }
 
-.blurr {
-  opacity: 0.5;
-}
-
-.hidden {
-  display: none;
-}
-
-.hideMenu {
-  margin-left: -20%;
-  transition: 2s;
-} */
+*/
 
 /* * {
   

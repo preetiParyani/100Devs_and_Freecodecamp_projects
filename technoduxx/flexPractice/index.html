@@ -104,8 +104,15 @@
               </div>
 
               <div class="button_container">
-                <button id="saveBtn" type="button">Save</button>
-                <button type="button">Reset</button>
+                <button
+                  class="button"
+                  id="save"
+                  type="button"
+                  onclick="displayConfirmation()"
+                >
+                  Save
+                </button>
+                <button class="button" type="button">Reset</button>
               </div>
             </form>
           </div>
@@ -156,7 +163,7 @@
         <img src="check-mark.png" alt="" />
         <p>Registration Sucessful!</p>
 
-        <button id="close">Close</button>
+        <button class="button" id="close" onclick="Exit()">Close</button>
       </section>
     </div>
     <script src="js/main.js"></script>
