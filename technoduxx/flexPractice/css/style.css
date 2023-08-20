@@ -1,3 +1,4 @@
+/* to start with the logo thing tooltip or sub menu */
 * {
   box-sizing: border-box;
   overflow: auto;
@@ -7,6 +8,14 @@
   --dark: #272727;
   --light: #f3f3f3;
   --navFontSize: 1rem;
+}
+#logo {
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+}
+li {
+  margin: 4em 0;
 }
 body {
   width: 100vw;
@@ -38,11 +47,30 @@ li {
 .sidebar_container nav ul {
   margin: 0;
   padding: 0;
-  font-size: var(--navFontSize);
-  display: flex;
+  width: 100%;
+  font-size: 1rem;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center; */
+}
+.sidebar_container nav ul li {
+  display: flex;
+  justify-content: space-around;
   align-items: center;
+}
+.sidebar_container nav ul i,
+.sidebar_container nav ul span {
+  width: 50%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.sidebar_container nav ul i {
+  text-align: left;
+}
+.center {
+  text-align: center;
 }
 
 .content_container {
@@ -174,9 +202,8 @@ select {
 }
 
 .hideMenu {
-  margin-left: -15%;
-  transition: all 2s ease;
-  
+  margin-left: -7.5%;
+  transition: margin 2s;
 }
 
 /* 
