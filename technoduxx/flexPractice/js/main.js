@@ -14,7 +14,6 @@ document.querySelector("#close").addEventListener("click", Exit);
 
 const collapseMenu = () => {
   document.querySelector(".sidebar_container").classList.toggle("hideMenu");
-  document.querySelector(i).classList.toggle("center");
 
   document.querySelector(".content_container").style.width = "100%";
 };
