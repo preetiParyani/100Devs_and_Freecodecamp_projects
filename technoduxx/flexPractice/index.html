@@ -53,21 +53,34 @@
         </nav>
         <div class="data_container">
           <div class="form_container">
-            <form action="#">
+            <form name="form" action="#">
               <div class="formFields_container">
                 <section>
                   <label for="name">Name</label>
-                  <input id="name" type="text" placeholder="Enter your name" />
+                  <input
+                    name="name"
+                    id="name"
+                    type="text"
+                    placeholder="Enter your name"
+                    pat
+                    tern="^[a-z0-9_-]{3,16}$"
+                    required
+                  />
                 </section>
 
                 <section>
                   <label for="name">Class</label>
-                  <input id="name" type="text" placeholder="Enter your class" />
+                  <input
+                    id="name"
+                    type="text"
+                    placeholder="Enter your class"
+                    required
+                  />
                 </section>
 
                 <section>
                   <label for="name">City</label>
-                  <select name="city" id="city">
+                  <select name="city" id="city" required>
                     <option value="select" selected disabled>--select--</option>
                     <option value="bhopal">Bhopal</option>
                     <option value="indore">Indore</option>
@@ -80,17 +93,27 @@
                   <label for="gender_type">Gender</label>
 
                   <label for="male" class="gender_option">
-                    <input id="male" type="radio" name="gender_type" />
+                    <input id="male" type="radio" name="gender_type" required />
                     Male
                   </label>
 
                   <label for="female" class="gender_option">
-                    <input id="female" type="radio" name="gender_type" />
+                    <input
+                      id="female"
+                      type="radio"
+                      name="gender_type"
+                      required
+                    />
                     Female
                   </label>
 
                   <label for="other" class="gender_option">
-                    <input id="other" type="radio" name="gender_type" />
+                    <input
+                      id="other"
+                      type="radio"
+                      name="gender_type"
+                      required
+                    />
                     Other
                   </label>
                 </section>
