@@ -62,6 +62,7 @@ li {
 .sidebar_container nav ul i,
 .sidebar_container nav ul span {
   width: 50%;
+  overflow: hidden;
 }
 .sidebar_container nav ul li span a {
   text-decoration: none;
@@ -73,7 +74,7 @@ li {
 .sidebar_container nav ul i {
   text-align: center;
 }
-.sidebar_container nav ul i:hover {
+i:hover {
   cursor: pointer;
 }
 
@@ -204,6 +205,14 @@ select {
 }
 
 .hideMenu {
-  margin-left: -7.5%;
-  transition: margin 2s;
+  width: 7.5%;
+  transition: 1s;
+}
+.showMenu {
+  width: 15%;
+  transition: 2s;
+}
+
+.hide {
+  display: none;
 }
