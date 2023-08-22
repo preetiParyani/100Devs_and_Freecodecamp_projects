@@ -1,9 +1,64 @@
+let input = document.querySelector("input");
+let button = document.querySelector("#save");
+
+// button.disabled = true; //setting button state to disabled
+
+// input.addEventListener("change", stateHandle);
+
+// function stateHandle() {
+//   if (document.querySelector("input").value === "") {
+//     button.disabled = true; //button remains disabled
+//   } else {
+//     button.disabled = false; //button is enabled
+//   }
+// }
+
 const displayConfirmation = () => {
-  document.querySelector(".main_container").classList.add("blurr");
-  document.querySelector(".popup_container").classList.remove("hidden");
+  let inputName = document.querySelector("#name").value;
+  let inputClass = document.forms["myForm"]["#class"].value;
+
+  if (!validateName(inputName)) {
+    document.querySelector("#name").style.border = "2px solid red";
+  }
+
+  if (!validateClass(inputClass)) {
+    document.querySelector("#class").style.border = "2px solid red";
+  } else {
+    document.querySelector("#name").style.border = "2px solid #d2d2d2";
+    document.querySelector("#class").style.border = "2px solid #d2d2d2";
+
+    document.querySelector(".main_container").classList.add("blurr");
+    document.querySelector(".popup_container").classList.remove("hidden");
+  }
+};
+document.querySelector("#save").addEventListener("click", displayConfirmation);
+
+const validateName = (inputName) => {
+  const pattern = /[!@#$%^&*<>~`|0-9]/g;
+  let ans = pattern.exec(inputName);
+
+  if (inputName == "") {
+    document.querySelector(".name").innerText = "Name cannot be left empty!";
+    return false;
+  } else if (ans) {
+    document.querySelector(".name").innerText =
+      "Name cannot have special character";
+    return false;
+  }
+  return true;
 };
 
-document.querySelector("#save").addEventListener("click", displayConfirmation);
+const validateClass = (inputClass) => {
+  if (inputClass == "") {
+    document.querySelector(".class").innerText = "Class cannot be left empty!";
+    return false;
+  } else if (inputClass < 0 || inputClass > 12) {
+    document.querySelector(".classError").innerText =
+      "Please select the class between 1 to 12!";
+    return false;
+  }
+  return true;
+};
 
 const Exit = () => {
   document.querySelector(".main_container").classList.remove("blurr");
@@ -20,6 +75,7 @@ const collapseMenu = () => {
   } else {
     document.querySelector(".sidebar_container").classList.add("hideMenu");
     document.querySelector(".sidebar_container").classList.remove("showMenu");
+
     document.querySelector(".content_container").style.width = "100%";
   }
   for (let hidden of toBeHidden) {
@@ -29,16 +85,4 @@ const collapseMenu = () => {
 
 document.querySelector("#menu").addEventListener("click", collapseMenu);
 
-
-function validate(){
-  var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
-  var name = document.getElementById('name').value;
-  if(!regName.test(name)){
-      alert('Please enter your full name (first & last name).');
-      document.getElementById('name').focus();
-      return false;
-  }else{
-      alert('Valid name given.');
-      return true;
-  }
-}
+console.log(document.querySelector("#name").value);

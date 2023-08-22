@@ -1,213 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300&display=swap"
-      rel="stylesheet"
-    />
-    <title>Registration Form</title>
-  </head>
-  <body>
-    <div class="main_container">
-      <div class="sidebar_container">
-        <!-- Navbar -->
-        <nav class="sideBar">
-          <ul>
-            <li class="logo">
-              <span class="toBeHidden" id="logo">Logo</span>
-              <i class="fa-solid fa-fan" title="Logo"></i>
-            </li>
-            <li>
-              <span class="toBeHidden"><a href="#">Home</a></span
-              ><i class="fa-solid fa-house" title="home"></i>
-            </li>
-            <li>
-              <span class="toBeHidden"><a href="#">Form</a></span
-              ><i class="fa-solid fa-file tooltip" title="Form"></i>
-            </li>
-            <li>
-              <span class="toBeHidden"><a href="#">Form</a></span
-              ><i class="fa-solid fa-file" title="Form"></i>
-            </li>
-            <li>
-              <span class="toBeHidden"><a href="#">Form</a></span
-              ><i class="fa-solid fa-file" title="Form"></i>
-            </li>
-            <li>
-              <span class="toBeHidden"><a href="#">Form</a></span
-              ><i class="fa-solid fa-file" title="Form"></i>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="content_container">
-        <nav class="upper_navbar">
-          <button><i id="menu" class="fa-solid fa-bars"></i></button>
-          <button><i class="fa-solid fa-user"></i></button>
-        </nav>
-        <div class="data_container">
-          <div class="form_container">
-            <form name="form" action="#">
-              <div class="formFields_container">
-                <section>
-                  <label for="name">Name</label>
-                  <input
-                    name="name"
-                    id="name"
-                    type="text"
-                    placeholder="Enter your name"
-                    pat
-                    tern="^[a-z0-9_-]{3,16}$"
-                    required
-                  />
-                </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
 
-                <section>
-                  <label for="name">Class</label>
-                  <input
-                    id="name"
-                    type="text"
-                    placeholder="Enter your class"
-                    required
-                  />
-                </section>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300&display=swap"
+    rel="stylesheet" />
+  <title>Registration Form</title>
+</head>
 
-                <section>
-                  <label for="name">City</label>
-                  <select name="city" id="city" required>
-                    <option value="select" selected disabled>--select--</option>
-                    <option value="bhopal">Bhopal</option>
-                    <option value="indore">Indore</option>
-                    <option value="jabalbur">Jabalpur</option>
-                    <option value="satna">Satna</option>
-                  </select>
-                </section>
+<body>
+  <div class="main_container">
+    <div class="sidebar_container">
+      <!-- Navbar -->
+      <nav class="sideBar">
+        <ul>
+          <li class="logo">
+            <span class="toBeHidden" id="logo">Logo</span>
+            <i class="fa-solid fa-fan tooltip "><span class="tooltiptext">Logo</span></i>
+          </li>
+          <li>
+            <span class="toBeHidden"><a href="#">Home</a></span><i class="fa-solid fa-house tooltip"><span
+                class="tooltiptext">Home</span>
+          </li></i>
+          <li>
+            <span class="toBeHidden"><a href="#">Form</a></span><i class="fa-solid fa-file tooltip"><span
+                class="tooltiptext">Form</span></i>
+          </li>
+          <li>
+            <span class="toBeHidden"><a href="#">Form</a></span><i class="fa-solid fa-file tooltip"><span
+                class="tooltiptext">Form</span></i>
+          </li>
+          <li>
+            <span class="toBeHidden"><a href="#">Form</a></span><i class="fa-solid fa-file tooltip "><span
+                class="tooltiptext">Form</span></i>
 
-                <section id="gender">
-                  <label for="gender_type">Gender</label>
+          </li>
 
-                  <label for="male" class="gender_option">
-                    <input id="male" type="radio" name="gender_type" required />
-                    Male
-                  </label>
+          <li>
+            <span class="toBeHidden"><a href="#">Form</a></span><i class="fa-solid fa-file tooltip"><span
+                class="tooltiptext">Form</span></i>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="content_container">
+      <nav class="upper_navbar">
+        <button><i id="menu" class="fa-solid fa-bars"></i></button>
+        <button><i class="fa-solid fa-user"></i></button>
+      </nav>
+      <div class="data_container">
+        <div class="form_container">
+          <form name="form" action="#">
+            <div class="formFields_container">
+              <section>
+                <label for="name">Name</label>
+                <input name="name" id="name" type="text" placeholder="Enter your name" required />
+              </section>
 
-                  <label for="female" class="gender_option">
-                    <input
-                      id="female"
-                      type="radio"
-                      name="gender_type"
-                      required
-                    />
-                    Female
-                  </label>
+              <section>
+                <label for="class">Class</label>
+                <input id="class" type="number" placeholder="Enter your class" required />
+              </section>
 
-                  <label for="other" class="gender_option">
-                    <input
-                      id="other"
-                      type="radio"
-                      name="gender_type"
-                      required
-                    />
-                    Other
-                  </label>
-                </section>
+              <section>
+                <label for="city">City</label>
+                <select name="city" id="city" required>
+                  <option value="select" selected disabled>--select--</option>
+                  <option value="bhopal">Bhopal</option>
+                  <option value="indore">Indore</option>
+                  <option value="jabalbur">Jabalpur</option>
+                  <option value="satna">Satna</option>
+                </select>
+              </section>
 
-                <section id="nationality">
-                  <label for="nationality">Nationality</label>
+              <section id="gender">
+                <label for="gender_type">Gender</label>
 
-                  <label for="indian" class="nationality_option">
-                    <input
-                      type="checkbox"
-                      id="nationality"
-                      name="nationality"
-                    />
-                    Indian
-                  </label>
+                <label for="male" class="gender_option">
+                  <input id="male" type="radio" name="gender_type" required />
+                  Male
+                </label>
 
-                  <label for="other" class="nationality_option">
-                    <input
-                      type="checkbox"
-                      id="nationality"
-                      name="nationality"
-                    />
-                    Other
-                  </label>
-                </section>
-              </div>
+                <label for="female" class="gender_option">
+                  <input id="female" type="radio" name="gender_type" required />
+                  Female
+                </label>
 
-              <div class="button_container">
-                <button
-                  class="button"
-                  id="save"
-                  type="button"
-                  onclick="displayConfirmation()"
-                >
-                  Save
-                </button>
-                <button class="button" type="button">Reset</button>
-              </div>
-            </form>
-          </div>
-          <div class="table_container">
-            <table class="table">
-              <tr>
-                <th>Subject</th>
-                <th>Marks</th>
-                <th>Status</th>
-              </tr>
+                <label for="other" class="gender_option">
+                  <input id="other" type="radio" name="gender_type" required />
+                  Other
+                </label>
+              </section>
 
-              <tr>
-                <td>Maths</td>
-                <td>76</td>
-                <td>Pass</td>
-              </tr>
+              <section id="nationality">
+                <label for="nationality">Nationality</label>
 
-              <tr>
-                <td>Physics</td>
-                <td>81</td>
-                <td>Pass</td>
-              </tr>
+                <label for="indian" class="nationality_option">
+                  <input type="checkbox" id="nationality" name="nationality" />
+                  Indian
+                </label>
 
-              <tr>
-                <td>Chemistry</td>
-                <td>86</td>
-                <td>Pass</td>
-              </tr>
+                <label for="other" class="nationality_option">
+                  <input type="checkbox" id="nationality" name="nationality" />
+                  Other
+                </label>
+              </section>
+            </div>
 
-              <tr>
-                <td>English</td>
-                <td>96</td>
-                <td>Pass</td>
-              </tr>
+            <div class="button_container">
+              <button class="button" id="save" type="button" onclick="displayConfirmation()">
+                Save
+              </button>
+              <button class="button" type="button">Reset</button>
+            </div>
+          </form>
+        </div>
+        <div class="table_container">
+          <table class="table">
+            <tr>
+              <th>Subject</th>
+              <th>Marks</th>
+              <th>Status</th>
+            </tr>
 
-              <tr>
-                <td>Computer Science</td>
-                <td>92</td>
-                <td>Pass</td>
-              </tr>
-            </table>
-          </div>
+            <tr>
+              <td>Maths</td>
+              <td>76</td>
+              <td>Pass</td>
+            </tr>
+
+            <tr>
+              <td>Physics</td>
+              <td>81</td>
+              <td>Pass</td>
+            </tr>
+
+            <tr>
+              <td>Chemistry</td>
+              <td>86</td>
+              <td>Pass</td>
+            </tr>
+
+            <tr>
+              <td>English</td>
+              <td>96</td>
+              <td>Pass</td>
+            </tr>
+
+            <tr>
+              <td>Computer Science</td>
+              <td>92</td>
+              <td>Pass</td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
-    <div class="hidden popup_container">
-      <section id="popUp">
-        <img src="check-mark.png" alt="" />
-        <p>Registration Sucessful!</p>
+  </div>
+  <div class="hidden popup_container">
+    <section id="popUp">
+      <img src="check-mark.png" alt="" />
+      <p>Registration Sucessful!</p>
 
-        <button class="button" id="close" onclick="Exit()">Close</button>
-      </section>
-    </div>
-    <script
-      src="https://kit.fontawesome.com/70926d7ac1.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/main.js"></script>
-  </body>
+      <button class="button" id="close" onclick="Exit()">Close</button>
+    </section>
+  </div>
+  <script src="https://kit.fontawesome.com/70926d7ac1.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>
+
+
+
+
