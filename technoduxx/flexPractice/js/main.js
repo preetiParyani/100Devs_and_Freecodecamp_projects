@@ -15,14 +15,15 @@ let button = document.querySelector("#save");
 
 const displayConfirmation = () => {
   let inputName = document.querySelector("#name").value;
-  let inputClass = document.forms["myForm"]["#class"].value;
+  let inputClass = document.querySelector("#class").value;
 
   if (!validateName(inputName)) {
-    document.querySelector("#name").style.border = "2px solid red";
+    document.querySelector("#name").style.border = "2px solid orange";
+    document.querySelector("#name").innerHTML = "enter your name";
   }
 
   if (!validateClass(inputClass)) {
-    document.querySelector("#class").style.border = "2px solid red";
+    document.querySelector("#class").style.border = "2px solid orange";
   } else {
     document.querySelector("#name").style.border = "2px solid #d2d2d2";
     document.querySelector("#class").style.border = "2px solid #d2d2d2";
@@ -37,23 +38,23 @@ const validateName = (inputName) => {
   const pattern = /[!@#$%^&*<>~`|0-9]/g;
   let ans = pattern.exec(inputName);
 
-  if (inputName == "") {
-    document.querySelector(".name").innerText = "Name cannot be left empty!";
+  if (inputName === "") {
+    alert("Please Enter your name");
     return false;
   } else if (ans) {
-    document.querySelector(".name").innerText =
-      "Name cannot have special character";
+    alert("Name can't contain specials characters");
     return false;
+  } else {
+    return true;
   }
-  return true;
 };
 
 const validateClass = (inputClass) => {
   if (inputClass == "") {
-    document.querySelector(".class").innerText = "Class cannot be left empty!";
+    document.querySelector("#class").innerText = "Class cannot be left empty!";
     return false;
   } else if (inputClass < 0 || inputClass > 12) {
-    document.querySelector(".classError").innerText =
+    document.querySelector("#class").innerText =
       "Please select the class between 1 to 12!";
     return false;
   }
@@ -75,8 +76,10 @@ const collapseMenu = () => {
   } else {
     document.querySelector(".sidebar_container").classList.add("hideMenu");
     document.querySelector(".sidebar_container").classList.remove("showMenu");
-
     document.querySelector(".content_container").style.width = "100%";
+    for (let hidden of toBeHidden) {
+      hidden.classList.toggle("hide");
+    }
   }
   for (let hidden of toBeHidden) {
     hidden.classList.toggle("hide");
