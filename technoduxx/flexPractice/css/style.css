@@ -215,9 +215,6 @@ select {
 .hide {
   display: none;
 }
-.toBeTooltip {
-  visibility: hidden;
-}
 
 .tooltip .tooltiptext {
   visibility: hidden;
@@ -237,4 +234,8 @@ select {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   cursor: pointer;
+}
+.forFunction {
+  visibility: hidden;
+  position: absolute;
 }
