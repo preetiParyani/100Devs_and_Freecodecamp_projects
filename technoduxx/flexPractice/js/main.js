@@ -1,4 +1,3 @@
-let input = document.querySelector("input");
 let button = document.querySelector("#save");
 
 const displayConfirmation = () => {
@@ -59,28 +58,28 @@ document.querySelector("#close").addEventListener("click", Exit);
 const collapseMenu = () => {
   let toBeHidden = document.querySelectorAll(".toBeHidden");
   let menuHidden = document.querySelector(".hideMenu");
-  let icons = document.querySelectorAll('.fa-solid');
-  
+  let icons = document.querySelectorAll(".fa-solid");
+  let sidebar = document.querySelector(".sidebar_container");
+
   if (menuHidden) {
-    document.querySelector(".sidebar_container").classList.remove("hideMenu");
-    document.querySelector(".sidebar_container").classList.add("showMenu");
-    // document.querySelectorAll(".fa-solid").classList.remove("tooltip");
-    for(let icon of icons){
-      icon.classList.remove('tooltip');
+    sidebar.classList.remove("hideMenu");
+    sidebar.classList.add("showMenu");
+    //since we want all the icon to adapt the same thing in an if else we can't go with queryselectorAll so we have to use a for loop.
+    for (let icon of icons) {
+      icon.classList.remove("tooltip");
     }
   } else {
-    document.querySelector(".sidebar_container").classList.add("hideMenu");
-    document.querySelector(".sidebar_container").classList.remove("showMenu");
+    sidebar.classList.add("hideMenu");
+    sidebar.classList.remove("showMenu");
     document.querySelector(".content_container").style.width = "100%";
     // document.querySelectorAll(".fa-solid").classList.add("tooltip");
-    for(let icon of icons){
-      icon.classList.add('tooltip');
+    for (let icon of icons) {
+      icon.classList.add("tooltip");
     }
   }
   for (let hidden of toBeHidden) {
     hidden.classList.toggle("hide");
   }
-  
 };
 
 document.querySelector("#menu").addEventListener("click", collapseMenu);
