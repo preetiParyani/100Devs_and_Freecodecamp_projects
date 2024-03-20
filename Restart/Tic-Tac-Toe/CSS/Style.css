@@ -35,6 +35,7 @@ main {
 .box {
   height: 20vmin;
   width: 20vmin;
+  color: #0b0a0b;
   background-color: #e0aaff;
   font-size: 18vmin;
   display: flex;
@@ -43,11 +44,30 @@ main {
   border-radius: 1.2rem;
   border: none;
 }
-.reset {
+.reset,
+#new-btn {
   padding: 1.2vmin;
   font-size: 2vmin;
   background-color: #171617;
   color: #f5f2f5;
   border: none;
   border-radius: 0.2rem;
+}
+
+#msg {
+  color: #ffffc7;
+  font-size: 5vmin;
+}
+
+.msg-container {
+  height: 100vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.hide {
+  display: none;
 }

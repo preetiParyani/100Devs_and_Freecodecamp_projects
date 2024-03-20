@@ -1,6 +1,12 @@
 let boxes = document.querySelectorAll(".box");
 let resetBtn = document.querySelector(".reset");
-let turnO = true;
+let newGameBtn = document.querySelector("#new-btn");
+let msgContainer = document.querySelector(".msg-container");
+let msg = document.querySelector("#msg");
+
+let turnO = true; //playerX, playerO
+let count = 0; //To Track Draw
+
 const winPatterns = [
   [0, 1, 2],
   [0, 4, 8],
@@ -12,6 +18,17 @@ const winPatterns = [
   [6, 7, 8],
 ];
 
+const resetGame = () => {
+  turnO = true;
+  count = 0;
+  enableBoxes();
+  msgContainer.classList.add("hide");
+};
+
+newGameBtn.addEventListener("click", resetGame);
+resetBtn.addEventListener("click", resetGame);
+
+//Add Click Event Listener to each box
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
     console.log("box got clicked");
@@ -22,9 +39,15 @@ boxes.forEach((box) => {
       box.innerText = "X";
       turnO = true;
     }
-    
 
-    CheckWinner();
+    box.disabled = true;
+    count++;
+
+    let isWinner = CheckWinner();
+
+    if (count === 9 && !isWinner) {
+      gameDraw();
+    }
   });
 });
 
@@ -36,10 +59,34 @@ const CheckWinner = () => {
 
     if (Pos1Val != "" && Pos2Val != "" && Pos3Val != "") {
       if (Pos1Val === Pos2Val && Pos2Val === Pos3Val) {
-        console.log(Pos2Val + " is the winner");
-      } else {
-        console.log("Draw");
+        showWinner(Pos1Val);
+        return true;
       }
     }
   }
+};
+
+const gameDraw = () => {
+  msg.innerText = `Game was a Draw.`;
+  msgContainer.classList.remove("hide");
+  disableBoxes();
+};
+
+const disableBoxes = () => {
+  for (let box of boxes) {
+    box.disabled = true;
+  }
+};
+
+const enableBoxes = () => {
+  for (let box of boxes) {
+    box.disabled = false;
+    box.innerText = "";
+  }
+};
+
+const showWinner = (winner) => {
+  msg.innerText = `Congratulations, Winner is ${winner}`;
+  msgContainer.classList.remove("hide");
+  disableBoxes();
 };
